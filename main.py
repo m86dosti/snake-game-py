@@ -4,7 +4,6 @@ import random
 
 pygame.init()
 
-# Colors
 white = (255, 255, 255)
 yellow = (255, 255, 102)
 black = (0, 0, 0)
@@ -12,24 +11,19 @@ red = (213, 50, 80)
 green = (0, 255, 0)
 blue = (50, 153, 213)
 
-# Game window dimensions
 width, height = 600, 400
 game_window = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Simple Snake Game')
 
-# Game variables
 snake_block = 10
 snake_speed = 15
 
-# Clock
 clock = pygame.time.Clock()
 
-# Snake function
 def our_snake(snake_block, snake_list):
     for x in snake_list:
         pygame.draw.rect(game_window, black, [x[0], x[1], snake_block, snake_block])
 
-# Main game loop
 def game_loop():
     game_over = False
     game_close = False
